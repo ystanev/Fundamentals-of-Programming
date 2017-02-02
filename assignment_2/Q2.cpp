@@ -36,19 +36,19 @@ int main(){
 }
 
 void calculateNum(double real_part, double imag_part, double *magnitude, double *angle, int *quadrant){ /*complex <double> compl_num (),*/
-    *magnitude = sqrt( pow(real_part,2) * pow(imag_part,2) ); /*pow(compl_num(real_part)*/ /*compl_num(imag_part)*/
+    *magnitude = sqrt( pow(real_part,2) + pow(imag_part,2) ); /*pow(compl_num(real_part)*/ /*compl_num(imag_part)*/
     *angle = atan( fabs ( imag_part / real_part ) ) * (180 / M_PI); // Degrees /*compl_num(real_part)/compl_num(imag_part)*/
 
-    if(0 <= *angle && *angle <= 90){
+    if(real_part >= 1 && imag_part >= 1){
         *quadrant = 1;
     }
-    else if(90 <= *angle && *angle <= 180){
+    else if(real_part <= -1 && imag_part >= 1){
         *quadrant = 2;
     }
-    else if(180 <= *angle && *angle <= 270){
+    else if(real_part <= -1 && imag_part <= -1){
         *quadrant = 3;
     }
-    else if(270 <= *angle && *angle <= 360){
+    else if(real_part >= 1 && imag_part <= -1){
         *quadrant = 4;
     }
     else{
