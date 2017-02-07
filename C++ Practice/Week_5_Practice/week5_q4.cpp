@@ -21,19 +21,10 @@ int main(){
 
 int countWords(char words[]){
     int nSpaces = 0;
-    //unsigned int i = 0;
 
-    /*while(isspace(words[i])){
-        i++;
-    }*/
-
-    for (int i=0; i<256; i++){
+    for (int i=0; i<256 && words[i] != '\0'; i++){
         if(isspace(words[i])){
-           nSpaces++;
-            // Skip over duplicate spaces & if a NULL character is found, we're at the end of the string
-            //while(isspace(words[i++]))
-                if(words[i] == '\0')
-                    nSpaces--;
+            nSpaces++;
         }
     }
     // The number of words = the number of spaces + 1
