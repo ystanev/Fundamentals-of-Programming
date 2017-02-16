@@ -27,6 +27,13 @@ int _tmain(int argc, _TCHAR* argv[]){
 	outfile.open("wave_data.txt");
     infile.open("wave.txt"); //Opens file wave.txt
 
+	//Variables
+	double steep_lim = 0.14285714285;
+    double steepness;
+	int counter=0;
+    double max_steepness = 0;
+	double avr_steepness_1, avr_steepness_2, avr_steepness_3;
+
     if(infile.fail()){ //Checks for file opening.
         cout << "ERROR => File Failed to Open.";
     }
@@ -36,8 +43,7 @@ int _tmain(int argc, _TCHAR* argv[]){
             //Read data from file into array of structures.
             infile >> wave_data[i].year >> wave_data[i].month >> wave_data[i].day >> wave_data[i].hour >> wave_data[i].minute >> wave_data[i].wave_height >> wave_data[i].wave_length;
 
-            double steep_lim = 0.14285714285;
-            double steepness = wave_data[i].wave_height / wave_data[i].wave_length;
+           steepness = wave_data[i].wave_height / wave_data[i].wave_length;
 
             if(steepness > steep_lim){
                 outfile << "Wave Data:" << endl;
@@ -46,32 +52,30 @@ int _tmain(int argc, _TCHAR* argv[]){
                 outfile << "The steepness of the wave is: " << steepness << endl;
             }
 
-            //Average Steepness by Year 2010-2012
-            int counter=0;
-            double max_steepness = 0;
+            //Average Steepness by Year 2010-2012      
             //2010
             if(wave_data[i].year == 2010){
                 counter++;
-
-                double avr_steepness = (steepness++) / counter;
-                cout << "The average steepness of waves in 2010 is: " << avr_steepness << endl;
+				avr_steepness_1 = (steepness++) / counter;                				
             }
 
             //2011
             if(wave_data[i].year == 2011){
                 counter++;
-                double avr_steepness = (steepness++) / counter;
-                cout << "The average steepness of waves in 2011 is: " << avr_steepness << endl;
+                avr_steepness_2 = (steepness++) / counter;               
             }
 
             //2012
             if(wave_data[i].year == 2012){
                 counter++;
-                double avr_steepness = (steepness++) / counter;
-                cout << "The average steepness of waves in 2012 is: " << avr_steepness << endl;
+                avr_steepness_3 = (steepness++) / counter;               
             }
         }
     }
+
+	cout << "The average steepness of waves in 2010 is: " << avr_steepness_1 << endl;
+	cout << "The average steepness of waves in 2011 is: " << avr_steepness_2 << endl;
+	cout << "The average steepness of waves in 2012 is: " << avr_steepness_3 << endl;
 
     infile.close();
 	outfile.close();
