@@ -15,7 +15,7 @@ struct DNAnt{
 //Function Prototypes
 void data2DNA(DNAnt allDNA[], int SIZE);
 void countDNAnt(DNAnt allDNA[], int SIZE, int num_a, int num_c, int num_g, int num_t);
-void DNAtoRNA(DNAnt allDNA[], int SIZE, int num_t);
+void DNAtoRNA(DNAnt allDNA[], int SIZE/*, int num_t*/);
 
 int main() {
     int const SIZE = 80;
@@ -26,7 +26,7 @@ int main() {
     //Calling the function
     data2DNA(allDNA,SIZE);
     countDNAnt(allDNA, SIZE, num_a, num_c, num_g, num_t);
-    DNAtoRNA(allDNA, SIZE, num_t);
+    DNAtoRNA(allDNA, SIZE/*, num_t*/);
 
     system("PAUSE");
     return 0;
@@ -48,7 +48,7 @@ void data2DNA(DNAnt allDNA[], int SIZE){
             //Read data from file into array of structures.
             infile >>  allDNA[i].num_1 >> allDNA[i].num_2 >> allDNA[i].num_3 >> allDNA[i].num_4;
 
-            for(int j=0; j<100; j++){
+            for(int j=0; j<100; j++){ //Assigns data to c-string array
                 //num_1
                 if(allDNA[i].num_1 == 1){
                     allDNA[i].dna_strand[j] = 'A';
@@ -135,13 +135,13 @@ void countDNAnt(DNAnt allDNA[], int SIZE, int num_a, int num_c, int num_g, int n
     cout << "A-" << num_a << " C-" <<num_c << " G-" << num_g << " T-" << num_t << endl;
 }
 
-void DNAtoRNA(DNAnt allDNA[], int SIZE, int num_t){
+void DNAtoRNA(DNAnt allDNA[], int SIZE/*, int num_t*/){
     ofstream outfile;
     outfile.open("RNA.txt");
 
     for(int i=0; i<SIZE; i++){
         for(int j=0; j<100; j++){
-            if(allDNA[i].dna_strand[j] == 'T' && num_t > 25){
+            if(allDNA[i].dna_strand[j] == 'T' /*&& num_t > 25*/){
                 allDNA[i].dna_strand[j] = 'U';
             }
 
