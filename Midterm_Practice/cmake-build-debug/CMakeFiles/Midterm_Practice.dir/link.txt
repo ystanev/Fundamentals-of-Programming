@@ -1,0 +1,1 @@
+/usr/bin/c++   -g   CMakeFiles/Midterm_Practice.dir/Q1.cpp.o CMakeFiles/Midterm_Practice.dir/Q2.cpp.o  -o Midterm_Practice 
