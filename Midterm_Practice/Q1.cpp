@@ -42,3 +42,22 @@ int GCD(int num, int denom){
     }
     return num;
 }
+
+/*
+void in_out(point p_3, rectangle r_1){
+
+cout << " enter the rec. v alues: ";
+cin << rectangle.x1 << rectangle.y1 << rectangle.x2 << rectangle.y2;
+
+cout << "enter point: ";   
+cin << p_3.x << p_3.y;
+ 
+if( ( r_1.x1 < p_3.x && p_3.x < R_1.x2 ) && ( r_1.y1 < p_3.y && p_3.y < r_1.y2 ) ){
+ cout << "In";	
+}
+else{
+ cout << "In";	
+}
+
+} 
+*/
