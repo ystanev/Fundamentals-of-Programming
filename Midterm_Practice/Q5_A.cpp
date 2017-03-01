@@ -60,10 +60,10 @@ int main() {
         }
     }
 
-    cout << "First Quadrant has : " << q1_num << " pairs." <<endl;
-    cout << "Second Quadrant has : " << q2_num << " pairs." <<endl;
-    cout << "Third Quadrant has : " << q3_num << " pairs." <<endl;
-    cout << "Fourth Quadrant has : " << q4_num << " pairs." <<endl;
+    cout << "First  Quadrant has: " << setw(3) << q1_num << " pairs." <<endl;
+    cout << "Second Quadrant has: " << setw(3) << q2_num << " pairs." <<endl;
+    cout << "Third  Quadrant has: " << setw(3) << q3_num << " pairs." <<endl;
+    cout << "Fourth Quadrant has: " << setw(3) << q4_num << " pairs." <<endl;
 
     //Close file.
     outfile.close();
