@@ -1,4 +1,5 @@
 #include "Clock.h"
+#include "Box.h"
 #include <iostream>
 #include <cstdlib> //system()
 
@@ -24,14 +25,26 @@ int main(){
     clock_1.incrementSecs(s_1);
 
     clock_1.setClock(h_1, m_1, s_1); // Setter
-    clock_1.getClock(&h_1, &m_1, &s_1); // Getter ***References***
+    clock_1.getClock(&h_1, &m_1, &s_1); // Getter
 
-    /*Clock clock_2 (h_1, m_1, s_1); //Using Overloaded Consttuctor
+    Clock clock_2 (h_1, m_1, s_1);
 
     clock_2.setClock(h_1, m_1, s_1);
-    clock_2.getClock(&h_1, &m_1, &s_1);*/
+    clock_2.getClock(&h_1, &m_1, &s_1);
 
     cout << "The time is: " << h_1 << ":" << m_1 << ":" << s_1 << endl;
+
+/*====================================================================================================================*/
+
+    // Print total number of objects before creating object.
+    cout << "Inital Stage Count: " << Box::getObjectCount() << endl;
+
+    Box Box1(3.3, 1.2, 1.5);    // Declare box1
+    Box Box2(8.5, 6.0, 2.0);    // Declare box2
+
+    // Print total number of objects after creating object.
+    cout << "Final Stage Count: " << Box::getObjectCount() << endl;
+
 
     system("PAUSE");
     return 0;
