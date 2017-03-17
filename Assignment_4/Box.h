@@ -16,6 +16,6 @@ class Box {
         double length, width, heigt;
 };
 
-int Box::objectCount = 0;
+//int Box::objectCount = 0;
 
 #endif
