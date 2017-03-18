@@ -46,15 +46,15 @@ int main(){
 
     // Print total number of objects before creating object.
 
-    int a = Box::getObjectCount();
+    //int a = Box::getObjectCount();
 
-    cout << "Inital Stage Count: " << /*Box::getObjectCount()*/ a << endl;
+    cout << "Inital Stage Count: " << Box::getObjectCount() << endl;
 
     Box Box1(3.3, 1.2, 1.5);    // Declare box1
     Box Box2(8.5, 6.0, 2.0);    // Declare box2
 
     // Print total number of objects after creating object.
-    cout << "Final Stage Count: " << /*Box::getObjectCount()*/ a << endl;
+    cout << "Final Stage Count: " << Box::getObjectCount() << endl;
 
 
     system("PAUSE");
