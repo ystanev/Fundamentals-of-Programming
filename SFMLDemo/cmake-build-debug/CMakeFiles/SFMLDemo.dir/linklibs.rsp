@@ -1,0 +1,1 @@
+/Clion_SFML/lib/libsfml-system-d.a /Clion_SFML/lib/libsfml-window-d.a /Clion_SFML/lib/libsfml-graphics-d.a /Clion_SFML/lib/libsfml-network-d.a /Clion_SFML/lib/libsfml-audio-d.a -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 
