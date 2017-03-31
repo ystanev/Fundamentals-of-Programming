@@ -1,0 +1,3 @@
+C:/Users/yurys/CLionProjects/Assignment_5/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/yurys/CLionProjects/Assignment_5/cmake-build-debug/CMakeFiles/Assignment_5.dir
+C:/Users/yurys/CLionProjects/Assignment_5/cmake-build-debug/CMakeFiles/rebuild_cache.dir

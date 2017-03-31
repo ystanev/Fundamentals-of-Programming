@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/yurys/CLionProjects/Assignment_5/BasicShape.cpp
+BasicShape.h
+C:/Users/yurys/CLionProjects/Assignment_5/BasicShape.h
+Circle.h
+C:/Users/yurys/CLionProjects/Assignment_5/Circle.h
+
+C:/Users/yurys/CLionProjects/Assignment_5/BasicShape.h
+cmath
+-
+
+C:/Users/yurys/CLionProjects/Assignment_5/Circle.cpp
+BasicShape.h
+C:/Users/yurys/CLionProjects/Assignment_5/BasicShape.h
+Circle.h
+C:/Users/yurys/CLionProjects/Assignment_5/Circle.h
+
+C:/Users/yurys/CLionProjects/Assignment_5/Circle.h
+BasicShape.h
+C:/Users/yurys/CLionProjects/Assignment_5/BasicShape.h
+
+C:/Users/yurys/CLionProjects/Assignment_5/main.cpp
+BasicShape.h
+C:/Users/yurys/CLionProjects/Assignment_5/BasicShape.h
+Circle.h
+C:/Users/yurys/CLionProjects/Assignment_5/Circle.h
+iostream
+-
+
